@@ -21,5 +21,6 @@ This project includes:
 - **Other:** Breadboard prototyping, soldering
 
 ## Project Structure
-- The LEDs in each column have a common anode. 16 anode columns each connected to a pin on a 74HC595 shift register
-- The LEDs in each layer have a common cathode. 4 transistors used to select which ones to connect to GND. Others are open circuits. Gates connected to Arduino pins.
+- **Columns:** Each of the 16 LED columns shares a common anode, each connected to a pin on a 74HC595 shift register.
+- **Layers:** Each of the 4 layers shares a common cathode, controlled by transistors to select which layer is grounded.
+- **Control:** Arduino pins drive the shift registers and transistors to create multiplexed animation.
