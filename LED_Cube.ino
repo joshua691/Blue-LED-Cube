@@ -53,6 +53,8 @@ void turnOffEverything() {
   shiftOutLights(0x0000);
 }
 
+// A 16-bit integer is given to shift out to the shift registers driving the LED columns
+// 1 turns the column one and 0 turns it off
 void shiftOutLights(uint16_t order) {
   byte first = order & 0xFF;
   byte second = (order >> 8) & 0xFF;
@@ -62,6 +64,8 @@ void shiftOutLights(uint16_t order) {
   digitalWrite(latchPin,HIGH);
 }
 
+// An image is given to be displayed by shifting out 16 bits for each layer
+// The duration is how long to display the given image
 void display(uint16_t layout0, uint16_t layout1, uint16_t layout2, uint16_t layout3, int duration) {
   uint16_t layouts[numLayers] = {layout0,layout1,layout2,layout3};
   for(int t = 0; t < duration/4; t++) {
