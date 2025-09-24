@@ -2,6 +2,8 @@
 
 A 4×4×4 LED cube controlled by an Arduino using transistors and multiplexing, achieving flicker-free animation at 250 Hz with a 25% refresh rate. This project demonstrates circuit design, embedded programming, and PCB layout skills using KiCad.
 
+![Cube in Action](images and gifs/Final Perf Board Construction.gif)
+
 ## Overview
 This project includes:
 - Circuit schematic and PCB layout designed in KiCad
